@@ -9,10 +9,11 @@ class Square:
         width: width of the square
         height: height of the square
     """
-    def __init__(self, **kwargs):
+    def __init__(self, *args, **kwargs):
         """ initialization """
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def area(self):
         """ Area of the square """
@@ -20,7 +21,7 @@ class Square:
 
     def perimeter(self):
         """ Perimeter of the square """
-        return (self.width * 2) + (self.height * 2)
+        return 2 * (self.width + self.height)
 
     def __str__(self):
         """ Print the str version of square"""
@@ -29,7 +30,7 @@ class Square:
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area())
     print(s.perimeter())
