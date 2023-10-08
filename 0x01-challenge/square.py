@@ -3,7 +3,12 @@
 
 
 class Square:
-
+    """
+    A class that perform geometry
+    Args:
+        width: width of the square
+        height: height of the square
+    """
     def __init__(self, **kwargs):
         """ initialization """
         for key, value in kwargs.items():
@@ -14,9 +19,11 @@ class Square:
         return self.width * self.width
 
     def perimeter(self):
+        """ Perimeter of the square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
+        """ Print the str version of square"""
         return "{}/{}".format(self.width, self.height)
 
 
