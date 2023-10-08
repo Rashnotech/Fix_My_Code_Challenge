@@ -1,10 +1,20 @@
 #!/usr/bin/python3
+""" a module that find the square """
 
-class square(): 
+
+class Square:
+    """
+        A class that perform geometry
+        Args:
+            width: width of the square
+            height: height of the square
+    """
+
     width = 0
     height = 0
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
+        """ initialization """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -21,7 +31,7 @@ class square():
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
