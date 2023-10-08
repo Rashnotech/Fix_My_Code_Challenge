@@ -3,12 +3,6 @@
 
 
 class Square:
-    """
-    A class that perform geometry
-    Args:
-        width: width of the square
-        height: height of the square
-    """
 
     def __init__(self, **kwargs):
         """ initialization """
