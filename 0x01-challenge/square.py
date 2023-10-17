@@ -2,7 +2,7 @@
 """ a module that find the square """
 
 
-class Square():
+class Square:
     """
     A class that perform geometry
     Args:
